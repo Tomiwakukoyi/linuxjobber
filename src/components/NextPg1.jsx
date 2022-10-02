@@ -1,13 +1,18 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import LeftBody from "./LeftBody";
-import Ratings from "./Ratings";
+import RangeComp from "./RangeComp";
+import NextPg2 from "./NextPg2";
 
 function NextPg1() {
   return (
     <Main>
       <LeftBody />
-      <Ratings />
+      <RangeComp />
+      <Routes>
+        <Route path="/nextpage2" element={<NextPg2 />} />
+      </Routes>
     </Main>
   );
 }
@@ -20,7 +25,6 @@ const Main = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: black;
   width: 400px;
   height: 400px;
 `;

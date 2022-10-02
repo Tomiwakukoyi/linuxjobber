@@ -1,0 +1,59 @@
+:root {
+  --main-color: rgb(104, 117, 217);
+  --main-color-hover: rgb(104, 117, 217, 0.2);
+  --track-color: #ddd;
+  --track-going-color: linear-gradient(90deg, #800165 0%, #d3014e 100%);
+}
+
+.customSlider {
+  /* max width of your slider */
+  max-width: 300px;
+  /* Optional: Only If you want to center your slider in the page */
+  margin-left: 9%;
+  margin-top: 17%;
+}
+
+.customSlider-track {
+  /* Top value to align your track to the center of your thumb */
+  top: 8px;
+  /* thickness of the track */
+  height: 10px;
+  /* default color of your track */
+  background: var(--track-color);
+  border-radius: 17px;
+}
+
+.customSlider-track.customSlider-track-0 {
+  /* color of the track before the thumb */
+  background: var(--track-going-color);
+}
+.customSlider-thumb {
+  cursor: pointer;
+  /* shape of the thumb: circle */
+  top: -3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  border: 8px solid pink;
+  /* remove default outline when selected */
+  outline: none;
+}
+
+.customSlider-thumb:hover {
+  box-shadow: 0 0 0 8px var(--main-color-hover);
+}
+/* .range-value {
+  width: 32px;
+  height: 25px;
+  left: 35.7%;
+  top: 22%;
+  font-family: "HelveticaNeueCyr";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #002851;
+} */
+
+.range-space {
+  top: 20%;
+}

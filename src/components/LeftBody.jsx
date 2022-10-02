@@ -16,31 +16,34 @@ function LeftBody() {
       <CameraBg />
       <Camera />
       <Point />
-      <HeadingText>Tommyk</HeadingText>
-      <List>
-        <ProfileSec>
-          <VectorBg />
-          <ProfileIcon />
-        </ProfileSec>
-        <Title>Profile</Title>
-        <Vector />
-      </List>
-      <List2>
-        <ProfileSec>
-          <VectorBg />
-          <CoursesIcon />
-        </ProfileSec>
-        <Title>Courses</Title>
-        <Vector />
-      </List2>
-      <List3>
-        <ProfileSec>
-          <VectorBg />
-          <AttendanceIcon />
-        </ProfileSec>
-        <Title>Attendance</Title>
-        <Vector />
-      </List3>
+
+      <Div>
+        <HeadingText>Tommyk</HeadingText>
+        <List>
+          <ProfileSec>
+            <VectorBg />
+            <ProfileIcon />
+          </ProfileSec>
+          <Title>Profile</Title>
+          <Vector />
+        </List>
+        <List2>
+          <ProfileSec>
+            <VectorBg />
+            <CoursesIcon />
+          </ProfileSec>
+          <Title>Courses</Title>
+          <Vector />
+        </List2>
+        <List3>
+          <ProfileSec>
+            <VectorBg />
+            <AttendanceIcon />
+          </ProfileSec>
+          <Title>Attendance</Title>
+          <Vector />
+        </List3>
+      </Div>
       <Logout>
         <ExitIcon />
         <LogoutP>Logout</LogoutP>
@@ -51,16 +54,19 @@ function LeftBody() {
 
 export default LeftBody;
 const Left = styled.div`
-  width: 500px;
+  width: 300px;
   height: 500px;
   margin-top: 200px;
+`;
+const Div = styled.div`
+  top: -160px;
 `;
 const Img = styled.div`
   background-image: url(${tomiwa});
   position: absolute;
-  width: 227px;
-  height: 248px;
-  left: 241px;
+  width: 180px;
+  height: 220px;
+  left: 190px;
   top: 220px;
   border-radius: 35px;
   background-repeat: no-repeat;
@@ -71,12 +77,12 @@ const Img = styled.div`
 `;
 const CameraBg = styled.div`
   position: absolute;
-  width: 39px;
+  width: 44px;
   height: 39px;
-  left: 335px;
-  top: 449px;
+  left: 260px;
+  top: 420px;
   background: linear-gradient(180deg, #800165 0%, #d3014e 100%);
-  border-radius: 50px;
+  border-radius: 100px;
   &:hover {
     border: 1px solid blue;
   }
@@ -84,11 +90,11 @@ const CameraBg = styled.div`
 const Camera = styled.div`
   position: absolute;
   z-index: 100;
-  height: 20px;
-  width: 25px;
+  height: 24px;
+  width: 30px;
   background-image: url(${camera});
-  left: 20.25%;
-  top: 58.65%;
+  left: 266.5px;
+  top: 425px;
   background-size: cover;
   background-repeat: no-repeat;
 `;
@@ -97,8 +103,8 @@ const Point = styled.div`
   background-image: url(${point});
   height: 15px;
   width: 18px;
-  top: 59%;
-  left: 20.33%;
+  top: 429px;
+  left: 271px;
   background-size: cover;
   background-repeat: no-repeat;
 `;
@@ -107,7 +113,7 @@ const HeadingText = styled.div`
   position: absolute;
   width: 100px;
   height: 34px;
-  left: 298px;
+  left: 210px;
   top: 515px;
   color: #30302e;
   font-family: "HelveticaNeueCyr";
@@ -124,16 +130,16 @@ const HeadingText = styled.div`
 const List = styled.div`
   position: absolute;
   display: flex;
-  width: 53px;
+  width: 30px;
   height: 53px;
-  left: 241px;
+  left: 140px;
   top: 604px;
 `;
 const List2 = styled.div`
   position: absolute;
   width: 53px;
   height: 53px;
-  left: 241px;
+  left: 140px;
   top: 680px;
 `;
 const List3 = styled.div`
@@ -141,7 +147,7 @@ const List3 = styled.div`
   display: grid;
   width: 53px;
   height: 53px;
-  left: 241px;
+  left: 140px;
   top: 756px;
 `;
 const ProfileSec = styled.div``;
@@ -179,7 +185,7 @@ const ExitIcon = styled.div`
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 308px;
+  left: 200px;
   top: 842px;
   color: #acb7eb;
   cursor: pointer;
@@ -188,7 +194,7 @@ const LogoutP = styled.div`
   position: absolute;
   width: 54px;
   height: 26px;
-  left: 347px;
+  left: 250px;
   top: 840px;
   font-family: "HelveticaNeueCyr";
   font-style: normal;

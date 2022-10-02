@@ -14,17 +14,7 @@ import { Link } from "react-router-dom";
 
 const DEFAULT_IS_CLICKED = false;
 
-function RightBody() {
-  const [route, setRoute] = React.useState(false);
-
-  const success = () => setRoute(true);
-  //////
-
-  // const [isActive, setActive] = useState("false");
-
-  // const handleToggle = () => {
-  //   setActive(!isActive);
-  // };
+function RightBody(props) {
   /////////
   //Yes Btn
   const [isClickedYes, setIsClickedYes] = React.useState(DEFAULT_IS_CLICKED);
@@ -60,6 +50,15 @@ function RightBody() {
   const lastClicked = () => {
     setLastBtn(true);
   };
+  /////////////////////////////////////////
+  // state for savig the inputed data//
+
+  //first one - course of study
+  const [course, setCourse] = React.useState("");
+
+  const handleCourse = (e) => {
+    setCourse(e.target.value);
+  };
 
   return (
     <Card>
@@ -72,7 +71,12 @@ function RightBody() {
             <InputCont>
               <TickImg src={ticked} />
               <Tick>Yes</Tick>
-              <Input1 name="text" placeholder="course studied in school" />
+              <Input1
+                name="text"
+                placeholder="course studied in school"
+                onChange={handleCourse}
+                value={course}
+              />
               <Input2
                 type="text"
                 onFocus={(e) => {
@@ -216,7 +220,7 @@ const TickImg = styled.img`
   height: 18px;
   background-size: cover;
   background-repeat: no-repeat;
-  left: 41.5%;
+  left: 40%;
   top: 31.5%;
 `;
 const ReturnBtn = styled.img`
